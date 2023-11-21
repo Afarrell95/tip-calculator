@@ -17,28 +17,36 @@
 body{
     background:  var(--light-grayish-cyan);
     display:flex;
+    justify-content: center;
+    align-items: center;
     font-family: 'Space Mono', monospace;
 }
 
 button{
     border: none;
-    outline: none;
-    width: 5rem;
     text-align: center;
-    padding: 5px 0;
-    border-radius: 4px;
-    color: var(--white);
-    background: var(--very-dark-cyan);
+    padding: 1em 2em;
+    width: 30%;
+    border-radius: 5px;
     cursor: pointer;
     transition: all .4s ease;
+    font-weight: 700;
 }
 
 input{
+    border:none;
+    background: var(--very-light-grayish-cyan);
+}
+
+.input{
+    margin: 1em 0 1em 0;
+    display: flex;
+    justify-content: space-between;
     padding:.7em;
     border:none;
     background: var(--very-light-grayish-cyan);
     border-radius: 5px;
-    width: 100%;
+    width: 100%; 
 }
 
 .main-head{
@@ -60,27 +68,25 @@ input{
 .bill-container{
     max-width: 50%;
     padding-right: 1em;
-    
 }
 
 .btn-container{
+    margin-top: 1em;
+    margin-bottom: 1em;
     display: flex;
     flex-wrap: wrap;
     gap: .6rem;
-    margin-top: .5rem;
     width: 100%;
 }
 
 .tip-amount-select{
     background: var(--very-dark-cyan);
-    border: none;
-    padding:.5em;
-    border-radius: 5px;
     color: var(--white);
 }
 
-.tip-amount-select:hover{
+.tip-amount-select:hover, #custom:hover{
     background:var(--strong-cyan);
+    color: var(--very-dark-cyan);
 }
 
 #custom{
