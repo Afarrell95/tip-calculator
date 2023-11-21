@@ -1,3 +1,13 @@
+:root {
+    --very-dark-cyan: hsl(183, 100%, 15%);
+    --dark-grayish-cyan: hsl(186, 14%, 43%);
+    --grayish-cyan: hsl(184, 14%, 56%);
+    --light-grayish-cyan: hsl(185, 41%, 84%);
+    --very-light-grayish-cyan: hsl(189, 41%, 97%);
+    --white: hsl(0, 0%, 100%);
+    --strong-cyan: hsl(172, 67%, 45%);
+}
+
 *{
     padding:0;
     margin:0;
@@ -5,13 +15,30 @@
 }
 
 body{
-    background:  hsl(185, 41%, 84%);
+    background:  var(--light-grayish-cyan);
     display:flex;
     font-family: 'Space Mono', monospace;
 }
 
 button{
+    border: none;
+    outline: none;
+    width: 5rem;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 4px;
+    color: var(--white);
+    background: var(--very-dark-cyan);
     cursor: pointer;
+    transition: all .4s ease;
+}
+
+input{
+    padding:.7em;
+    border:none;
+    background: var(--very-light-grayish-cyan);
+    border-radius: 5px;
+    width: 100%;
 }
 
 .main-head{
@@ -22,7 +49,7 @@ button{
 }
 
 .calculator-container{
-    background: hsl(0, 0%, 100%);
+    background: var(--white);
     border-radius: 15px;
     max-width: 70%;
     padding:2em;
@@ -32,30 +59,37 @@ button{
 
 .bill-container{
     max-width: 50%;
+    padding-right: 1em;
+    
+}
+
+.btn-container{
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
+    gap: .6rem;
+    margin-top: .5rem;
+    width: 100%;
 }
 
 .tip-amount-select{
-    background: hsl(183, 100%, 15%);
+    background: var(--very-dark-cyan);
     border: none;
     padding:.5em;
     border-radius: 5px;
-    color: white;
+    color: var(--white);
 }
 
 .tip-amount-select:hover{
-    background:hsl(172, 67%, 45%);
+    background:var(--strong-cyan);
 }
 
 #custom{
-    background:  hsl(189, 41%, 97%);
-    color: hsl(183, 100%, 15%);
+    background:  var(--very-light-grayish-cyan);
+    color: var(--very-dark-cyan);
 }
 
 .total-container{
-    background: hsl(183, 100%, 15%);
+    background: var(--very-dark-cyan);
     width: 50%;
     border-radius: 15px;
     padding: 2em;
@@ -65,10 +99,10 @@ button{
 .reset{
     border-radius: 5px;
     width:100%;
-    background: hsl(172, 67%, 45%);
-    color:hsl(183, 100%, 15%);
+    background: var(--strong-cyan);
+    color:var(--very-dark-cyan);
     border:none;
-    padding: .5em;
+    padding: 1em;
     font-weight: 700;
     text-transform: uppercase;
     margin-top: 5em;
@@ -87,19 +121,19 @@ button{
 
 .tip-total-pp,
 .total-pp{
-    color:hsl(172, 67%, 45%);
+    color:var(--strong-cyan);
     font-size: 1.5rem;
     font-weight: 700;
 }
 
 .pp-head{
-    color: white;
+    color: var(--white);
     font-weight: 700;
     font-size: .9rem;
 }
 
 .pp-span{
-    color: hsl(185, 41%, 84%);
+    color: var(--light-grayish-cyan);
     font-weight: 400;
     font-size: .6rem;
 }
