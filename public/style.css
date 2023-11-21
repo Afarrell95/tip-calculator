@@ -59,15 +59,47 @@ button{
     width: 50%;
     border-radius: 15px;
     padding: 2em;
+   
 }
 
 .reset{
     border-radius: 5px;
-    width:80%;
+    width:100%;
     background: hsl(172, 67%, 45%);
     color:hsl(183, 100%, 15%);
     border:none;
     padding: .5em;
     font-weight: 700;
     text-transform: uppercase;
+    margin-top: 5em;
+}
+
+.tip-total-pp-container,
+.total-pp-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.tip-total-pp-container{
+    margin-bottom: 3em;
+}
+
+.tip-total-pp,
+.total-pp{
+    color:hsl(172, 67%, 45%);
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.pp-head{
+    color: white;
+    font-weight: 700;
+    font-size: .9rem;
+}
+
+.pp-span{
+    color: hsl(185, 41%, 84%);
+    font-weight: 400;
+    font-size: .6rem;
 }
