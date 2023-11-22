@@ -24,11 +24,14 @@ function calculate(event) {
   totalPerPerson.innerHTML = `$${totalBill.toFixed(2)}`;
 }
 
-// Add click event listeners to tip amount buttons
 tipAmountBtn.forEach((button) => {
   button.addEventListener("click", calculate);
 });
-//reset calculator
+
 reset.addEventListener("click", () => {
   window.location.reload();
 });
+
+//TO-DO
+//input validation
+//custom button value

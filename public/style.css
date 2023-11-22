@@ -92,6 +92,7 @@ input{
 #custom{
     background:  var(--very-light-grayish-cyan);
     color: var(--very-dark-cyan);
+    padding:0;
 }
 
 .total-container{
@@ -143,4 +144,17 @@ input{
     font-weight: 400;
     font-size: .6rem;
 }
-/*TO-DO: make mobile style*/
+
+@media screen and (max-width: 790px){
+    .calculator-container{
+       display: flex;
+       flex-wrap: wrap;
+        max-width: 100%;
+        margin:0;
+    }
+
+    .bill-container, .total-container{
+        min-width: 100%;
+    }
+    
+}

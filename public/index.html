@@ -27,6 +27,7 @@
               type="number"
               value=""
               placeholder="0.00"
+              required
             />
           </div>
           <span>Select Tip %</span>
@@ -36,7 +37,9 @@
             <button class="tip-amount-select" data-value=".15">15%</button>
             <button class="tip-amount-select" data-value=".25">25%</button>
             <button class="tip-amount-select" data-value=".5">50%</button>
-            <button class="tip-amount-select" id="custom">Custom</button>
+            <button class="tip-amount-select" id="custom" data-value="">
+              Custom
+            </button>
           </div>
           <span>Number of People</span>
           <div class="input">
@@ -46,6 +49,7 @@
               type="number"
               value=""
               placeholder="0"
+              required
             />
           </div>
         </div>
