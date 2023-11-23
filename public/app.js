@@ -10,18 +10,21 @@ tipPerPersonTotal.innerHTML = "$0.00";
 totalPerPerson.innerHTML = "$0.00";
 
 function calculate(event) {
-  let bill = billInput.value;
-  let people = peopleInput.value;
+  if (billInput.value == "" || peopleInput.value == "") {
+    alert("Fill out all required amounts");
+  } else {
+    let bill = billInput.value;
+    let people = peopleInput.value;
+    let customTip = customAmount.value / 100;
+    console.log(customTip);
+    const dataValue = parseFloat(event.target.getAttribute("data-value"));
 
-  const dataValue = parseFloat(event.target.getAttribute("data-value"));
+    let totalTip = (bill * dataValue) / people;
+    let totalBill = bill / people + totalTip / people;
 
-  let totalTip = (bill * dataValue) / people;
-  let totalBill = bill / people + totalTip / people;
-  console.log(totalTip);
-  console.log(totalBill);
-
-  tipPerPersonTotal.innerHTML = `$${totalTip.toFixed(2)}`;
-  totalPerPerson.innerHTML = `$${totalBill.toFixed(2)}`;
+    tipPerPersonTotal.innerHTML = `$${totalTip.toFixed(2)}`;
+    totalPerPerson.innerHTML = `$${totalBill.toFixed(2)}`;
+  }
 }
 
 tipAmountBtn.forEach((button) => {
@@ -33,5 +36,5 @@ reset.addEventListener("click", () => {
 });
 
 //TO-DO
-//input validation
+//better input validation
 //custom button value
